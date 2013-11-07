@@ -17,6 +17,6 @@ class IpgeobaseTest < TestCase
   def test_lookup_response_object
     meta = Ipgeobase.lookup @ip
 
-    assert_equal 54.321480, meta.lat
+    assert_equal 54.321480, meta[:lat]
   end
 end

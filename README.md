@@ -11,21 +11,21 @@
 
 Add this line to your application's Gemfile:
 
-    gem 'ipgeobase'
+    gem 'ipgeobase', github: 'cinic/ipgeobase'
 
 And then execute:
 
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install 'ipgeobase'
+    $ bundle install
 
 ## Usage
 
     ip_meta = Ipgeobase.lookup('10.11.12.134')
-    ip_meta.city # => Москва
-    ip_meta.country # => Россия
+    ip_meta[:city] # => Москва
+    ip_meta[:country] # => Россия
+    ip_meta[:inetnum] # => 10.11.0.0 - 10.11.255.255
+    ip_meta[:district] # => Центральный федеральный округ
+    ip_meta[:lat] # => 54.321480
+    ip_meta[:lng] # => 54.321480
 
 
 ## Contributing
@@ -38,7 +38,7 @@ Or install it yourself as:
 
 run tests:
 
-    turn -Itest test/lib
+    rake test
 
 
 
